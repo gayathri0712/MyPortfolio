@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gayathri Kella | Portfolio</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#f4f7fb;
+      color:#333;
+      line-height:1.6;
+    }
+
+    header{
+      background:linear-gradient(135deg,#0f172a,#2563eb);
+      color:white;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    nav{
+      width:90%;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 0;
+      flex-wrap:wrap;
+    }
+
+    nav h1{
+      font-size:30px;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      flex-wrap:wrap;
+    }
+
+    nav ul li{
+      margin:10px;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#facc15;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+
+      background:
+      linear-gradient(rgba(15,23,42,0.8), rgba(37,99,235,0.8)),
+      url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop');
+
+      background-size:cover;
+      background-position:center;
+    }
+
+    .hero h2{
+      font-size:60px;
+      margin-bottom:20px;
+      max-width:900px;
+    }
+
+    .hero p{
+      max-width:700px;
+      font-size:22px;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 35px;
+      background:#facc15;
+      color:black;
+      text-decoration:none;
+      border-radius:30px;
+      font-weight:bold;
+      transition:0.3s;
+      margin:10px;
+    }
+
+    .btn:hover{
+      background:white;
+      transform:translateY(-3px);
+    }
+
+    section{
+      width:90%;
+      margin:70px auto;
+    }
+
+    section h2{
+      text-align:center;
+      margin-bottom:40px;
+      color:#2563eb;
+      font-size:42px;
+    }
+
+    .card{
+      background:white;
+      padding:35px;
+      border-radius:20px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    .skill-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+      gap:20px;
+    }
+
+    .skill{
+      background:linear-gradient(135deg,#2563eb,#1e40af);
+      color:white;
+      text-align:center;
+      padding:18px;
+      border-radius:15px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .skill:hover{
+      transform:scale(1.05);
+    }
+
+    form{
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+    }
+
+    form input,
+    form textarea{
+      padding:15px;
+      border:1px solid #ccc;
+      border-radius:10px;
+      font-size:16px;
+    }
+
+    form button{
+      background:#2563eb;
+      color:white;
+      border:none;
+      padding:15px;
+      border-radius:10px;
+      font-size:18px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    form button:hover{
+      background:#1e40af;
+    }
+
+    .social-buttons{
+      margin-top:20px;
+      text-align:center;
+    }
+
+    footer{
+      background:#0f172a;
+      color:white;
+      text-align:center;
+      padding:25px;
+      margin-top:50px;
+    }
+
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+      }
+
+      .hero h2{
+        font-size:38px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+
+      section h2{
+        font-size:32px;
+      }
+
+    }
+
+    @media(max-width:480px){
+
+      .hero h2{
+        font-size:30px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      nav h1{
+        font-size:24px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <nav>
+
+      <h1>Gayathri Kella</h1>
+
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <section class="hero">
+
+    <h2>Personal Professional Portfolio Website</h2>
+
+    <p>
+      Motivated B.Tech CSE student skilled in C, Java,
+      HTML, CSS, DBMS, and Data Structures with strong
+      interest in software development and problem-solving.
+    </p>
+
+    <div class="social-buttons">
+
+      <a href="#contact" class="btn">
+        Hire Me
+      </a>
+
+      <a href="https://www.linkedin.com/in/gayathri-kella-b9433a33b/"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn">
+
+         LinkedIn
+
+      </a>
+
+      <a href="https://github.com/gayathri0712"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn">
+
+         GitHub
+
+      </a>
+
+    </div>
+
+  </section>
+
+  <section id="about">
+
+    <h2>About Me</h2>
+
+    <div class="card">
+
+      <p>
+        To build strong technical expertise in software development
+        while contributing effectively to organizational growth.
+        Passionate about programming, web development, and
+        problem-solving with a keen interest in learning new
+        technologies.
+      </p>
+
+    </div>
+
+  </section>
+
+  <section id="skills">
+
+    <h2>Skills</h2>
+
+    <div class="skill-grid">
+
+      <div class="skill">C</div>
+      <div class="skill">Java</div>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">MySQL</div>
+      <div class="skill">DBMS</div>
+      <div class="skill">OOP</div>
+      <div class="skill">Data Structures</div>
+
+    </div>
+
+  </section>
+
+  <section id="projects">
+
+    <h2>Projects</h2>
+
+    <div class="grid">
+
+      <div class="card">
+
+        <h3>Student Management System</h3>
+
+        <p>
+          Developed using Java with OOP concepts for efficient
+          student data handling and menu-driven operations.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>DS Practice Programs</h3>
+
+        <p>
+          Solved array, stack, queue, and linked list problems
+          in C language to improve logic-building and coding skills.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="education">
+
+    <h2>Education</h2>
+
+    <div class="grid">
+
+      <div class="card">
+
+        <h3>B.Tech - CSE</h3>
+
+        <p>Aditya College of Engineering & Technology</p>
+
+        <p>CGPA: 8.05</p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Intermediate - MPC</h3>
+
+        <p>Tirumala Junior College</p>
+
+        <p>Marks: 933</p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>SSC</h3>
+
+        <p>Sri Mahathi EM School</p>
+
+        <p>Marks: 421</p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="contact">
+
+    <h2>Contact Me</h2>
+
+    <div class="card">
+
+      <form id="contactForm">
+
+        <input type="text"
+               placeholder="Enter your name"
+               required>
+
+        <input type="email"
+               placeholder="Enter your email"
+               required>
+
+        <textarea rows="5"
+                  placeholder="Enter your message"
+                  required></textarea>
+
+        <button type="submit">
+          Send Message
+        </button>
+
+      </form>
+
+      <br>
+
+      <p><strong>Email:</strong> gayatrikella0712@gmail.com</p>
+
+      <p><strong>Phone:</strong> 7893488210</p>
+
+    </div>
+
+  </section>
+
+  <footer>
+
+    <p>© 2026 Gayathri Kella | Portfolio Website</p>
+
+  </footer>
+
+  <script>
+
+    document.getElementById("contactForm")
+    .addEventListener("submit", function(event){
+
+      event.preventDefault();
+
+      alert("Message Sent Successfully!");
+
+    });
+
+  </script>
+
+</body>
+</html>
